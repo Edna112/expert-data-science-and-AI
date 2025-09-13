@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-expert-blue: #1e40af;
   --color-expert-light-blue: #3b82f6;
   --color-expert-dark-blue: #1e3a8a;
@@ -32,18 +32,57 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-expert-blue hover:bg-expert-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    background-color: var(--color-expert-blue);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-expert-dark-blue);
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-expert-blue font-semibold py-3 px-6 rounded-lg border-2 border-expert-blue transition-colors duration-200;
+    background-color: white;
+    color: var(--color-expert-blue);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-expert-blue);
+    transition: background-color 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f9fafb;
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    padding: 4rem 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-padding {
+      padding: 4rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding: 4rem 2rem;
+    }
   }
 }
