@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-expert-blue: #1e40af;
+  --color-expert-light-blue: #3b82f6;
+  --color-expert-dark-blue: #1e3a8a;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-expert-blue hover:bg-expert-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-expert-blue font-semibold py-3 px-6 rounded-lg border-2 border-expert-blue transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+}
