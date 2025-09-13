@@ -4,12 +4,29 @@
   --color-expert-blue: #1e40af;
   --color-expert-light-blue: #3b82f6;
   --color-expert-dark-blue: #1e3a8a;
+  --color-heading-blue: #028ab0;
+  --color-border-light: #f0f0f0;
   --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-pacifico: 'Pacifico', cursive;
 }
 
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Pacifico', cursive;
+    color: #028ab0;
+    line-height: 100px;
+    font-size: 2.33rem;
+  }
+  
+  h2 {
+    font-family: 'Pacifico', cursive;
+    color: #028ab0;
+    font-size: 1.75rem;
+    border-color: #f0f0f0;
   }
 }
 
