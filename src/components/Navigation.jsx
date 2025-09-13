@@ -4,18 +4,19 @@ import { Link, useLocation } from 'react-router-dom';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLetsTalkOpen, setIsLetsTalkOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-expert-blue shadow-lg">
+    <nav className="shadow-lg" style={{backgroundColor: '#028ab0'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <div className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold font-serif leading-7">
+              <div className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold font-serif">
                 Expert Data Science & AI, LLC
               </div>
             </Link>
@@ -26,56 +27,156 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif leading-7 ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
                   isActive('/') 
-                    ? 'bg-expert-light-blue text-white' 
-                    : 'text-white hover:bg-expert-light-blue hover:text-white'
+                    ? 'bg-teal-700 text-white' 
+                    : 'text-white hover:text-white'
                 }`}
+                style={{
+                  backgroundColor: isActive('/') ? '#028ab0' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive('/')) {
+                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive('/')) {
+                    e.target.style.backgroundColor = 'transparent';
+                  }
+                }}
               >
                 Home
               </Link>
               <Link
                 to="/services"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif leading-7 ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
                   isActive('/services') 
-                    ? 'bg-expert-light-blue text-white' 
-                    : 'text-white hover:bg-expert-light-blue hover:text-white'
+                    ? 'bg-teal-700 text-white' 
+                    : 'text-white hover:text-white'
                 }`}
+                style={{
+                  backgroundColor: isActive('/services') ? '#028ab0' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive('/services')) {
+                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive('/services')) {
+                    e.target.style.backgroundColor = 'transparent';
+                  }
+                }}
               >
                 Services
               </Link>
               <Link
                 to="/insights"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif leading-7 ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
                   isActive('/insights') 
-                    ? 'bg-expert-light-blue text-white' 
-                    : 'text-white hover:bg-expert-light-blue hover:text-white'
+                    ? 'bg-teal-700 text-white' 
+                    : 'text-white hover:text-white'
                 }`}
+                style={{
+                  backgroundColor: isActive('/insights') ? '#028ab0' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive('/insights')) {
+                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive('/insights')) {
+                    e.target.style.backgroundColor = 'transparent';
+                  }
+                }}
               >
                 Insights
               </Link>
-              <Link
-                to="/about"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif leading-7 ${
-                  isActive('/about') 
-                    ? 'bg-expert-light-blue text-white' 
-                    : 'text-white hover:bg-expert-light-blue hover:text-white'
-                }`}
-              >
-                About
-              </Link>
+              {/* About Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsAboutOpen(!isAboutOpen)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                    isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo')
+                      ? 'bg-teal-700 text-white' 
+                      : 'text-white hover:text-white'
+                  }`}
+                  style={{
+                    backgroundColor: (isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo')) ? '#028ab0' : 'transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!(isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo'))) {
+                      e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!(isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo'))) {
+                      e.target.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  About
+                  <svg className="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isAboutOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <Link
+                      to="/about"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-serif"
+                      onClick={() => setIsAboutOpen(false)}
+                    >
+                      About Overview
+                    </Link>
+                    <Link
+                      to="/about/about-us"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-serif"
+                      onClick={() => setIsAboutOpen(false)}
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="/about/founder-ceo"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-serif"
+                      onClick={() => setIsAboutOpen(false)}
+                    >
+                      Founder & CEO
+                    </Link>
+                  </div>
+                )}
+              </div>
               
               {/* Let's Talk Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => setIsLetsTalkOpen(!isLetsTalkOpen)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif leading-7 ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
                     isActive('/contact') || isActive('/schedule-consultation')
-                      ? 'bg-expert-light-blue text-white' 
-                      : 'text-white hover:bg-expert-light-blue hover:text-white'
+                      ? 'bg-teal-700 text-white' 
+                      : 'text-white hover:text-white'
                   }`}
+                  style={{
+                    backgroundColor: (isActive('/contact') || isActive('/schedule-consultation')) ? '#028ab0' : 'transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!(isActive('/contact') || isActive('/schedule-consultation'))) {
+                      e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!(isActive('/contact') || isActive('/schedule-consultation'))) {
+                      e.target.style.backgroundColor = 'transparent';
+                    }
+                  }}
                 >
                   Let's Talk
+                  <svg className="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
                 
                 {isLetsTalkOpen && (
@@ -138,50 +239,69 @@ const Navigation = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-expert-dark-blue">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{backgroundColor: '#028ab0'}}>
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-expert-light-blue font-serif leading-7"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-expert-light-blue font-serif leading-7"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               to="/insights"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-expert-light-blue font-serif leading-7"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
               onClick={() => setIsMenuOpen(false)}
             >
               Insights
             </Link>
-            <Link
-              to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-expert-light-blue font-serif leading-7"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
+            <div className="px-3 py-2">
+              <div className="text-base font-medium text-white font-serif mb-2">About</div>
+              <div className="pl-4 space-y-1">
+                <Link
+                  to="/about"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About Overview
+                </Link>
+                <Link
+                  to="/about/about-us"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/about/founder-ceo"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Founder & CEO
+                </Link>
+              </div>
+            </div>
             
             {/* Let's Talk Mobile Section */}
             <div className="px-3 py-2">
-              <div className="text-base font-medium text-white mb-2 font-serif leading-7">Let's Talk</div>
+              <div className="text-base font-medium text-white mb-2 font-serif">Let's Talk</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/contact"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-expert-light-blue hover:text-white font-serif leading-7"
+                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link
                   to="/schedule-consultation"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-expert-light-blue hover:text-white font-serif leading-7"
+                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Schedule Your Free Consultation
@@ -189,7 +309,7 @@ const Navigation = () => {
               </div>
             </div>
             
-            <div className="px-3 py-2 text-sm text-gray-300 font-serif leading-7">
+            <div className="px-3 py-2 text-sm text-gray-300 font-serif">
               Expert Data Science & AI, LLC
             </div>
           </div>

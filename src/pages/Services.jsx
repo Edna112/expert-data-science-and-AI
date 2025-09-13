@@ -1,33 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
 
 const Services = () => {
   const services = [
     {
-      number: "1",
-      title: "Ideation, Strategy & Solution Design",
-      description: "We collaborate with stakeholders to define clear problem statements, business objectives, technical requirements, and strategic solution designs – ensuring all data science and AI projects are value-driven."
+      title: "Data Strategy & Consulting",
+      description: "Develop comprehensive data strategies that align with your business objectives and drive measurable outcomes.",
+      icon: "📊"
     },
     {
-      number: "2", 
-      title: "Data Science & AI Implementation",
-      description: "We translate strategic designs into production-ready data science and AI solutions — handling data preparation, model development, validation, deployment, and the delivery of analytic insights and dashboards."
+      title: "Machine Learning & AI Development",
+      description: "Build custom ML models and AI solutions tailored to your specific business challenges and opportunities.",
+      icon: "🤖"
     },
     {
-      number: "3",
-      title: "Workflow Automation",
-      description: "We streamline and automate, analytics, and machine learning pipelines — from data ingestion, preparation, and transformation to model building, optimization, deployment, and intelligence dashboard reporting."
+      title: "Data Engineering & Infrastructure",
+      description: "Design and implement robust data pipelines and infrastructure to support scalable analytics and AI operations.",
+      icon: "⚙️"
     },
     {
-      number: "4",
-      title: "Production deployment",
-      description: "We deploy machine learning models and analytics solutions into production environments using automated pipelines – ensuring reliable integration with existing systems."
+      title: "Advanced Analytics & Business Intelligence",
+      description: "Create powerful dashboards and analytics solutions that provide real-time insights into your business performance.",
+      icon: "📈"
     },
     {
-      number: "5",
-      title: "Monitoring",
-      description: "We implement continuous monitoring of data quality and model performance to ensure accuracy, reliability, and compliance — enabling early detection of data drift and model degradation."
+      title: "Model Deployment & MLOps",
+      description: "Deploy and maintain production-ready ML models with comprehensive monitoring and automated retraining pipelines.",
+      icon: "🚀"
     }
   ];
 
@@ -104,26 +103,27 @@ const Services = () => {
           <div className="space-y-12">
             {services.map((service, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                {/* Blue header */}
-                <div className="bg-expert-blue px-4 md:px-6 py-3 md:py-4">
-                  <h3 className="text-lg md:text-xl font-semibold text-white">
-                    {service.number}. {service.title}
+                {/* Teal-blue header */}
+                <div className="bg-teal-600 px-6 py-4">
+                  <h3 className="text-xl font-semibold text-white">
+                    {service.title}
                   </h3>
                 </div>
                 
                 {/* Content area */}
-                <div className="grid md:grid-cols-2 gap-0">
+                <div className="grid lg:grid-cols-2 gap-0">
                   {/* Text content */}
-                  <div className="p-4 md:p-8">
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <p className="text-gray-700 text-lg leading-relaxed">
                       {service.description}
                     </p>
                   </div>
                   
                   {/* Image placeholder */}
-                  <div className="bg-gray-200 flex items-center justify-center min-h-[200px] md:min-h-[300px]">
+                  <div className="bg-gray-200 flex items-center justify-center min-h-[200px]">
                     <div className="text-center text-gray-500">
-                      <svg className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                       </svg>
                       <p className="text-sm font-medium">Service Image</p>
@@ -149,17 +149,17 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {trainingCategories.map((category, index) => (
               <div key={index} className="card">
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4 md:mb-6 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
                   {category.title}
                 </h3>
-                <ul className="space-y-2 md:space-y-3">
+                <ul className="space-y-3">
                   {category.courses.map((course, courseIndex) => (
                     <li key={courseIndex} className="flex items-start">
-                      <div className="w-2 h-2 bg-expert-blue rounded-full mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base text-gray-700">{course}</span>
+                      <div className="w-2 h-2 bg-expert-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">{course}</span>
                     </li>
                   ))}
                 </ul>
@@ -192,25 +192,6 @@ const Services = () => {
               Schedule Free Consultation
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Next Button Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with Our Insights</h2>
-            <p className="text-xl text-gray-600">Read our latest articles and tutorials on data science and AI</p>
-          </div>
-          <Link 
-            to="/insights" 
-            className="btn-primary inline-flex items-center text-lg px-8 py-4"
-          >
-            View Our Insights
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
       </section>
     </div>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --color-expert-blue: #1e40af;
-  --color-expert-light-blue: #3b82f6;
-  --color-expert-dark-blue: #1e3a8a;
+  --color-expert-blue: #028ab0;
+  --color-expert-light-blue: #028ab0;
+  --color-expert-dark-blue: #028ab0;
   --color-heading-blue: #028ab0;
   --color-border-light: #f0f0f0;
   --font-family-sans: 'Inter', system-ui, sans-serif;
@@ -11,26 +11,68 @@
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
   html {
     font-family: 'Inter', system-ui, sans-serif;
   }
   
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
   h1 {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Georgia', serif;
     color: #028ab0;
-    line-height: 100px;
+    line-height: 1.2;
     font-size: 2.33rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  h1.text-white {
+    color: white !important;
   }
   
   h2 {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Georgia', serif;
     color: #028ab0;
     font-size: 1.75rem;
     border-color: #f0f0f0;
+    margin: 0;
+    font-weight: bold;
   }
 }
 
 @layer components {
+  .bg-expert-blue {
+    background-color: var(--color-expert-blue);
+  }
+  
+  .bg-expert-light-blue {
+    background-color: var(--color-expert-light-blue);
+  }
+  
+  .bg-expert-dark-blue {
+    background-color: var(--color-expert-dark-blue);
+  }
+  
+  .text-expert-blue {
+    color: var(--color-expert-blue);
+  }
+  
+  .text-heading-blue {
+    color: var(--color-heading-blue);
+  }
+  
+  .border-expert-blue {
+    border-color: var(--color-expert-blue);
+  }
+  
   .btn-primary {
     background-color: var(--color-expert-blue);
     color: white;
@@ -68,6 +110,10 @@
   
   .card:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .nav-hover {
+    background-color: rgba(2, 138, 176, 0.8);
   }
   
   .section-padding {

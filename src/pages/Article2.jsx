@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
 
 const Article2 = () => {
   return (

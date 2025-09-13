@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Insights from './pages/Insights';
 import About from './pages/About';
+import AboutUs from './pages/AboutUs';
+import FounderCEO from './pages/FounderCEO';
 import Contact from './pages/Contact';
 import ScheduleConsultation from './pages/ScheduleConsultation';
 import Article1 from './pages/Article1';
@@ -26,6 +28,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
+            <Route path="/about/about-us" element={<AboutUs />} />
+            <Route path="/about/founder-ceo" element={<FounderCEO />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/schedule-consultation" element={<ScheduleConsultation />} />
             <Route path="/insights/future-machine-learning-business" element={<Article1 />} />
