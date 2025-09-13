@@ -45,33 +45,33 @@ const Home = () => {
           {/* Value Proposition Card */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
             {/* Blue header */}
-            <div className="bg-expert-blue px-6 py-4">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="bg-expert-blue px-4 md:px-6 py-3 md:py-4">
+              <h3 className="text-lg md:text-xl font-semibold text-white">
                 Value Proposition
               </h3>
             </div>
             
             {/* Content area */}
-            <div className="grid lg:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0">
               {/* Text content */}
-              <div className="p-8">
-                <div className="text-4xl mb-4">💡</div>
-                <ul className="space-y-4 text-gray-700">
+              <div className="p-4 md:p-8">
+                <div className="text-3xl md:text-4xl mb-4">💡</div>
+                <ul className="space-y-3 md:space-y-4 text-gray-700">
                   <li className="flex items-start">
-                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span>We help organizations transform data into business value through automated end-to-end data science and AI solutions.</span>
+                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <span className="text-sm md:text-base">We help organizations transform data into business value through automated end-to-end data science and AI solutions.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span>From project ideation and strategy to development and deployment, we offer full-cycle consulting and training services that drive measurable business outcomes.</span>
+                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <span className="text-sm md:text-base">From project ideation and strategy to development and deployment, we offer full-cycle consulting and training services that drive measurable business outcomes.</span>
                   </li>
                 </ul>
               </div>
               
               {/* Image placeholder */}
-              <div className="bg-gray-200 flex items-center justify-center min-h-[200px]">
+              <div className="bg-gray-200 flex items-center justify-center min-h-[200px] md:min-h-[300px]">
                 <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                   </svg>
                   <p className="text-sm font-medium">Value Proposition Image</p>
@@ -95,38 +95,38 @@ const Home = () => {
           {/* Impact Card */}
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
             {/* Blue header */}
-            <div className="bg-expert-blue px-6 py-4">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="bg-expert-blue px-4 md:px-6 py-3 md:py-4">
+              <h3 className="text-lg md:text-xl font-semibold text-white">
                 How we Create Impact
               </h3>
             </div>
             
             {/* Content area */}
-            <div className="grid lg:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0">
               {/* Text content */}
-              <div className="p-8">
-                <div className="text-4xl mb-4">📊</div>
-                <p className="text-lg font-semibold text-gray-900 mb-6">At ExpertDS.AI, we help organizations:</p>
-                <ul className="space-y-4 text-gray-700">
+              <div className="p-4 md:p-8">
+                <div className="text-3xl md:text-4xl mb-4">📊</div>
+                <p className="text-base md:text-lg font-semibold text-gray-900 mb-4 md:mb-6">At ExpertDS.AI, we help organizations:</p>
+                <ul className="space-y-3 md:space-y-4 text-gray-700">
                   <li className="flex items-start">
-                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span>Unlock the value of their data</span>
+                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <span className="text-sm md:text-base">Unlock the value of their data</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span>Bridge the gap between technical complexity and business impact.</span>
+                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <span className="text-sm md:text-base">Bridge the gap between technical complexity and business impact.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span>Accelerate your path to intelligent, automated decision-making.</span>
+                    <div className="w-3 h-3 bg-expert-blue rounded-full mt-2 mr-3 md:mr-4 flex-shrink-0"></div>
+                    <span className="text-sm md:text-base">Accelerate your path to intelligent, automated decision-making.</span>
                   </li>
                 </ul>
               </div>
               
               {/* Image placeholder */}
-              <div className="bg-gray-200 flex items-center justify-center min-h-[200px]">
+              <div className="bg-gray-200 flex items-center justify-center min-h-[200px] md:min-h-[300px]">
                 <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                   </svg>
                   <p className="text-sm font-medium">Impact Image</p>

@@ -60,11 +60,11 @@ const About = () => {
       {/* Founder & CEO Section */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Founder Image */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 md:order-1">
               <div className="relative">
-                <div className="w-80 h-80 mx-auto rounded-lg overflow-hidden shadow-lg">
+                <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-lg overflow-hidden shadow-lg">
                   <img
                     src={profileImage}
                     alt="Dr. Neba Nfonsang - Founder & CEO"
@@ -75,18 +75,18 @@ const About = () => {
             </div>
 
             {/* Founder Information */}
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="order-1 md:order-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Dr. Neba Nfonsang
               </h2>
-              <p className="text-xl text-expert-blue font-semibold mb-2">
+              <p className="text-lg md:text-xl text-expert-blue font-semibold mb-2">
                 Founder & CEO
               </p>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
                 Expert Data Science & AI, LLC
               </p>
               
-              <div className="space-y-6 text-gray-700">
+              <div className="space-y-4 md:space-y-6 text-sm md:text-base text-gray-700">
                 <p>
                   Dr. Neba Nfonsang is the Founder and CEO of Expert Data Science & AI, LLC, and a Principal Data Scientist 
                   with a strong track record of leading numerous end-to-end analytics, data science, machine learning, and AI 
