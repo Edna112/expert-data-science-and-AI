@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const ScheduleConsultation = () => {
   return (
@@ -17,7 +17,7 @@ const ScheduleConsultation = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Schedule Your Free Consultation
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">

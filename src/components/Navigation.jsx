@@ -10,9 +10,9 @@ const Navigation = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="shadow-lg" style={{backgroundColor: '#028ab0'}}>
+    <nav className="fixed top-0 left-0 right-0 z-[100] shadow-lg" style={{backgroundColor: '#028ab0', pointerEvents: 'auto'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16" style={{pointerEvents: 'auto'}}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
@@ -27,13 +27,14 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif cursor-pointer ${
                   isActive('/') 
                     ? 'bg-teal-700 text-white' 
                     : 'text-white hover:text-white'
                 }`}
                 style={{
-                  backgroundColor: isActive('/') ? '#028ab0' : 'transparent'
+                  backgroundColor: isActive('/') ? '#028ab0' : 'transparent',
+                  pointerEvents: 'auto'
                 }}
                 onMouseEnter={(e) => {
                   if (!isActive('/')) {
@@ -50,13 +51,14 @@ const Navigation = () => {
               </Link>
               <Link
                 to="/services"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif cursor-pointer ${
                   isActive('/services') 
                     ? 'bg-teal-700 text-white' 
                     : 'text-white hover:text-white'
                 }`}
                 style={{
-                  backgroundColor: isActive('/services') ? '#028ab0' : 'transparent'
+                  backgroundColor: isActive('/services') ? '#028ab0' : 'transparent',
+                  pointerEvents: 'auto'
                 }}
                 onMouseEnter={(e) => {
                   if (!isActive('/services')) {
@@ -124,7 +126,7 @@ const Navigation = () => {
                 </button>
                 
                 {isAboutOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-[9000]">
                     <Link
                       to="/about"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-serif"
@@ -238,25 +240,25 @@ const Navigation = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{backgroundColor: '#028ab0'}}>
+        <div className="md:hidden" style={{pointerEvents: 'auto'}}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{backgroundColor: '#028ab0', pointerEvents: 'auto'}}>
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               to="/insights"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
             >
               Insights
@@ -266,21 +268,21 @@ const Navigation = () => {
               <div className="pl-4 space-y-1">
                 <Link
                   to="/about"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Overview
                 </Link>
                 <Link
                   to="/about/about-us"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/about/founder-ceo"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Founder & CEO
@@ -294,14 +296,14 @@ const Navigation = () => {
               <div className="ml-4 space-y-1">
                 <Link
                   to="/contact"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif"
+                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link
                   to="/schedule-consultation"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif"
+                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Schedule Your Free Consultation

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const Insights = () => {
   return (
@@ -17,7 +17,7 @@ const Insights = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Insights & Tutorials
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
@@ -41,7 +41,7 @@ const Insights = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <Link to="/insights/future-machine-learning-business" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/future-machine-learning-business" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-blue-400 to-blue-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -63,7 +63,7 @@ const Insights = () => {
             </Link>
 
             {/* Article 2 */}
-            <Link to="/insights/building-scalable-ai-solutions" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/building-scalable-ai-solutions" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-purple-400 to-purple-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -85,7 +85,7 @@ const Insights = () => {
             </Link>
 
             {/* Article 3 */}
-            <Link to="/insights/data-driven-decision-making" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/data-driven-decision-making" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-green-400 to-green-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -108,7 +108,7 @@ const Insights = () => {
             </Link>
 
             {/* Article 4 */}
-            <Link to="/insights/cloud-native-data-solutions" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/cloud-native-data-solutions" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-orange-400 to-orange-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -130,7 +130,7 @@ const Insights = () => {
             </Link>
 
             {/* Article 5 */}
-            <Link to="/insights/python-data-science-tutorial" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/python-data-science-tutorial" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-teal-400 to-teal-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -152,7 +152,7 @@ const Insights = () => {
             </Link>
 
             {/* Article 6 */}
-            <Link to="/insights/state-of-ai-2024" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <Link to="/insights/state-of-ai-2024" className="card hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-indigo-400 to-indigo-600 h-48 rounded-t-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
