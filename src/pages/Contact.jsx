@@ -11,6 +11,9 @@ const Contact = () => {
     duration: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,11 +21,51 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      // Create the email content
+      const emailContent = `
+        New Contact Form Submission from ExpertDS.AI Website
+        
+        Name: ${formData.name}
+        Email: ${formData.email}
+        Message: ${formData.message}
+        Interest: ${formData.interest || 'Not specified'}
+        Preferred Start Date: ${formData.startDate || 'Not specified'}
+        Project Duration: ${formData.duration || 'Not specified'}
+        
+        Submitted on: ${new Date().toLocaleString()}
+      `;
+
+      // For now, we'll use a simple mailto link
+      // In production, you would integrate with a service like EmailJS, Formspree, or Netlify Forms
+      const mailtoLink = `mailto:info@expertds.ai?subject=New Contact Form Submission&body=${encodeURIComponent(emailContent)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+        interest: '',
+        startDate: '',
+        duration: ''
+      });
+      
+      setSubmitStatus('success');
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -180,11 +223,29 @@ const Contact = () => {
                   </div>
                 </div>
 
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                    Thank you for your message! Your email client should open with a pre-filled message. Please send it to complete your inquiry.
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                    There was an error submitting your form. Please try again or contact us directly at info@expertds.ai
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-expert-blue hover:bg-expert-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+                  disabled={isSubmitting}
+                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors duration-200 ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed text-white' 
+                      : 'bg-expert-blue hover:bg-expert-dark-blue text-white'
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
