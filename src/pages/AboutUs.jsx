@@ -1,12 +1,12 @@
 import React from 'react';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const AboutUs = () => {
   return (
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white"
+        className="relative text-white min-h-[70vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -14,12 +14,12 @@ const AboutUs = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white absolute inset-0 z-50 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               About Us
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
+            <p className="text-xl md:text-2xl text-white-100 flex justify-center items-center">
               Leading the future of data science and AI solutions
             </p>
           </div>

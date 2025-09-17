@@ -15,8 +15,8 @@ const Home = () => {
           backgroundRepeat: 'no-repeat'
         }}
       > <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 absolute inset-0 z-20">
-          <div className="text-center">
+        <div className="max-w-7xl h-screen mx-auto px-4 sm:px-6 lg:px-8  absolute inset-0 z-20">
+          <div className="text-center h-screen flex flex-col justify-center items-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Bridging the gap between data and business value
             </h1>

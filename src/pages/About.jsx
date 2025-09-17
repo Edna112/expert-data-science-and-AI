@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const About = () => {
   return (
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white"
+        className="relative text-white min-h-[70vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -15,8 +15,8 @@ const About = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
+        <div className="relative max-w-7xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="text-center ">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               About Us
             </h1>

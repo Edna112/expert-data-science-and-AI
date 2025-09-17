@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profileImage from '../assets/profile_pic__1_-removebg-preview.png';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const FounderCEO = () => {
   return (
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white"
+        className="relative text-white min-h-[70vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -16,7 +16,7 @@ const FounderCEO = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Founder & CEO
@@ -47,7 +47,7 @@ const FounderCEO = () => {
             {/* Founder Information */}
             <div className="flex-1 text-black">
               <p className="text-lg leading-relaxed mb-6">
-                Dr. Neba Nfonsang's global data science, AI, and analytics leadership expertise is built on a broad and diverse background that spans multiple distinct phases:
+                Dr. Neba Nfonsang's global data science, AI, and analytics leadership expertise is built on a broad and diverse background that spans four distinct phases:
               </p>
 
               <div className="space-y-6">

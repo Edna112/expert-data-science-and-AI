@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../assets/sky_rocks_banner_2.jpeg';
+import bannerImage from '../assets/sky_rocks_banner_3.png';
 
 const Services = () => {
   const services = [
@@ -68,7 +68,7 @@ const Services = () => {
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white"
+        className="relative text-white min-h-[70vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -76,7 +76,7 @@ const Services = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Services
