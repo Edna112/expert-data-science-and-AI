@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

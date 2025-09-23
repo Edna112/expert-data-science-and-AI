@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const AboutUs = () => {
   return (
@@ -41,7 +41,7 @@ const AboutUs = () => {
               </p>
               <p className="text-xl text-gray-600 mb-6">
                 Our team combines deep technical expertise with real-world business experience, having delivered 
-                successful projects for Fortune 500 companies across various industries including retail, 
+                successful projects for Fortune 10 companies across various industries including retail, 
                 automotive, technology, and manufacturing.
               </p>
               <p className="text-xl text-gray-600">

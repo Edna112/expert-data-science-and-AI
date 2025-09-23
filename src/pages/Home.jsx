@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const Home = () => {
   return (
@@ -18,10 +18,10 @@ const Home = () => {
         <div className="max-w-6xl h-screen mx-auto px-4 sm:px-6 lg:px-8  absolute inset-0 z-20">
           <div className="text-center h-screen flex flex-col justify-center items-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white italic mt-10">
-            ExpertDS.AI <br />Bridging the gap<br /> between data and<br /> business value
+            ExpertDS.AI 
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
-              Accelerating your path to intelligent, <br />automated decision-making
+              Bridging the gap between <br /> data and business value
             </p>
             <Link
               to="/services"

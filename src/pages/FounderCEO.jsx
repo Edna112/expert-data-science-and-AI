@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profileImage from '../assets/profile_pic__1_-removebg-preview.png';
-import bannerImage from '../assets/sky_rocks_banner_3.png';
+import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const FounderCEO = () => {
   return (
@@ -30,7 +30,7 @@ const FounderCEO = () => {
 
       {/* Founder & CEO Section */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Profile Section with Text Wrapping Around Image */}
           <div className="text-black">
             {/* Founder Image - Float Left for Text Wrapping */}
@@ -94,7 +94,7 @@ const FounderCEO = () => {
 
       {/* Back to About Us Link */}
       <section className="section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <Link 
             to="/about" 
             className="btn-secondary"
