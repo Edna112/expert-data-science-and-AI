@@ -10,9 +10,9 @@ const Navigation = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] shadow-lg" style={{backgroundColor: '#028ab0', pointerEvents: 'auto'}}>
+    <nav className="fixed top-0 left-0 right-0 z-[100] shadow-lg bg-[#158cba]" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16" style={{pointerEvents: 'auto'}}>
+        <div className="flex justify-between items-center h-18" style={{pointerEvents: 'auto'}}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
@@ -27,71 +27,68 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif cursor-pointer ${
+                className={`px-4 py-3 rounded-md text-base font-semibold transition-all duration-300 font-serif cursor-pointer ${
                   isActive('/') 
                     ? 'bg-teal-700 text-white' 
-                    : 'text-white hover:text-white'
+                    : 'text-white hover:text-cyan-300'
                 }`}
                 style={{
-                  backgroundColor: isActive('/') ? '#028ab0' : 'transparent',
-                  pointerEvents: 'auto'
+                  backgroundColor: isActive('/') ? '#158cba' : 'transparent',
+                  pointerEvents: 'auto',
+                  textShadow: 'none'
                 }}
                 onMouseEnter={(e) => {
-                  if (!isActive('/')) {
-                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
-                  }
+                  e.target.style.textShadow = '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff';
+                  e.target.style.color = '#00ffff';
                 }}
                 onMouseLeave={(e) => {
-                  if (!isActive('/')) {
-                    e.target.style.backgroundColor = 'transparent';
-                  }
+                  e.target.style.textShadow = 'none';
+                  e.target.style.color = 'white';
                 }}
               >
                 Home
               </Link>
               <Link
                 to="/services"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif cursor-pointer ${
+                className={`px-4 py-3 rounded-md text-base font-semibold transition-all duration-300 font-serif cursor-pointer ${
                   isActive('/services') 
                     ? 'bg-teal-700 text-white' 
-                    : 'text-white hover:text-white'
+                    : 'text-white hover:text-cyan-300'
                 }`}
                 style={{
-                  backgroundColor: isActive('/services') ? '#028ab0' : 'transparent',
-                  pointerEvents: 'auto'
+                  backgroundColor: isActive('/services') ? '#158cba' : 'transparent',
+                  pointerEvents: 'auto',
+                  textShadow: 'none'
                 }}
                 onMouseEnter={(e) => {
-                  if (!isActive('/services')) {
-                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
-                  }
+                  e.target.style.textShadow = '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff';
+                  e.target.style.color = '#00ffff';
                 }}
                 onMouseLeave={(e) => {
-                  if (!isActive('/services')) {
-                    e.target.style.backgroundColor = 'transparent';
-                  }
+                  e.target.style.textShadow = 'none';
+                  e.target.style.color = 'white';
                 }}
               >
                 Services
               </Link>
               <Link
                 to="/insights"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                className={`px-4 py-3 rounded-md text-base font-semibold transition-all duration-300 font-serif ${
                   isActive('/insights') 
                     ? 'bg-teal-700 text-white' 
-                    : 'text-white hover:text-white'
+                    : 'text-white hover:text-cyan-300'
                 }`}
                 style={{
-                  backgroundColor: isActive('/insights') ? '#028ab0' : 'transparent'
+                  backgroundColor: isActive('/insights') ? '#158cba' : 'transparent',
+                  textShadow: 'none'
                 }}
                 onMouseEnter={(e) => {
-                  if (!isActive('/insights')) {
-                    e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
-                  }
+                  e.target.style.textShadow = '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff';
+                  e.target.style.color = '#00ffff';
                 }}
                 onMouseLeave={(e) => {
-                  if (!isActive('/insights')) {
-                    e.target.style.backgroundColor = 'transparent';
-                  }
+                  e.target.style.textShadow = 'none';
+                  e.target.style.color = 'white';
                 }}
               >
                 Insights
@@ -100,23 +97,22 @@ const Navigation = () => {
               <div className="relative">
                 <button
                   onClick={() => setIsAboutOpen(!isAboutOpen)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                  className={`px-4 py-3 rounded-md text-base font-semibold transition-all duration-300 font-serif ${
                     isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo')
                       ? 'bg-teal-700 text-white' 
-                      : 'text-white hover:text-white'
+                      : 'text-white hover:text-cyan-300'
                   }`}
                   style={{
-                    backgroundColor: (isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo')) ? '#028ab0' : 'transparent'
+                    backgroundColor: (isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo')) ? '#158cba' : 'transparent',
+                    textShadow: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    if (!(isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo'))) {
-                      e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
-                    }
+                    e.target.style.textShadow = '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff';
+                    e.target.style.color = '#00ffff';
                   }}
                   onMouseLeave={(e) => {
-                    if (!(isActive('/about') || isActive('/about/about-us') || isActive('/about/founder-ceo'))) {
-                      e.target.style.backgroundColor = 'transparent';
-                    }
+                    e.target.style.textShadow = 'none';
+                    e.target.style.color = 'white';
                   }}
                 >
                   About
@@ -156,23 +152,22 @@ const Navigation = () => {
               <div className="relative">
                 <button
                   onClick={() => setIsLetsTalkOpen(!isLetsTalkOpen)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 font-serif ${
+                  className={`px-4 py-3 rounded-md text-base font-semibold transition-all duration-300 font-serif ${
                     isActive('/contact') || isActive('/schedule-consultation')
                       ? 'bg-teal-700 text-white' 
-                      : 'text-white hover:text-white'
+                      : 'text-white hover:text-cyan-300'
                   }`}
                   style={{
-                    backgroundColor: (isActive('/contact') || isActive('/schedule-consultation')) ? '#028ab0' : 'transparent'
+                    backgroundColor: (isActive('/contact') || isActive('/schedule-consultation')) ? '#158cba' : 'transparent',
+                    textShadow: 'none'
                   }}
                   onMouseEnter={(e) => {
-                    if (!(isActive('/contact') || isActive('/schedule-consultation'))) {
-                      e.target.style.backgroundColor = 'rgba(2, 138, 176, 0.8)';
-                    }
+                    e.target.style.textShadow = '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff';
+                    e.target.style.color = '#00ffff';
                   }}
                   onMouseLeave={(e) => {
-                    if (!(isActive('/contact') || isActive('/schedule-consultation'))) {
-                      e.target.style.backgroundColor = 'transparent';
-                    }
+                    e.target.style.textShadow = 'none';
+                    e.target.style.color = 'white';
                   }}
                 >
                   Let's Talk
@@ -241,48 +236,48 @@ const Navigation = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden" style={{pointerEvents: 'auto'}}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{backgroundColor: '#028ab0', pointerEvents: 'auto'}}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{backgroundColor: '#158cba', pointerEvents: 'auto'}}>
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
+              className="block px-4 py-3 rounded-md text-lg font-semibold text-white font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
+              className="block px-4 py-3 rounded-md text-lg font-semibold text-white font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               to="/insights"
-              className="block px-3 py-2 rounded-md text-base font-medium text-white font-serif cursor-pointer"
+              className="block px-4 py-3 rounded-md text-lg font-semibold text-white font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
               onClick={() => setIsMenuOpen(false)}
             >
               Insights
             </Link>
             <div className="px-3 py-2">
-              <div className="text-base font-medium text-white font-serif mb-2">About</div>
+              <div className="text-lg font-semibold text-white font-serif mb-2">About</div>
               <div className="pl-4 space-y-1">
                 <Link
                   to="/about"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
+                  className="block px-4 py-2 rounded-md text-base font-medium text-blue-100 font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Overview
                 </Link>
                 <Link
                   to="/about/about-us"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
+                  className="block px-4 py-2 rounded-md text-base font-medium text-blue-100 font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/about/founder-ceo"
-                  className="block px-3 py-2 rounded-md text-sm font-medium text-blue-100 font-serif cursor-pointer"
+                  className="block px-4 py-2 rounded-md text-base font-medium text-blue-100 font-serif cursor-pointer transition-all duration-300 hover:text-cyan-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Founder & CEO
@@ -292,18 +287,18 @@ const Navigation = () => {
             
             {/* Let's Talk Mobile Section */}
             <div className="px-3 py-2">
-              <div className="text-base font-medium text-white mb-2 font-serif">Let's Talk</div>
+              <div className="text-lg font-semibold text-white mb-2 font-serif">Let's Talk</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/contact"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif cursor-pointer"
+                  className="block px-4 py-2 rounded-md text-base text-gray-300 hover:bg-teal-500 hover:text-cyan-300 font-serif cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 <Link
                   to="/schedule-consultation"
-                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-teal-500 hover:text-white font-serif cursor-pointer"
+                  className="block px-4 py-2 rounded-md text-base text-gray-300 hover:bg-teal-500 hover:text-cyan-300 font-serif cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_30px_#00ffff]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Schedule Your Free Consultation

@@ -15,7 +15,7 @@ const About = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative max-w-7xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="relative max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center ">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               About Us
@@ -29,7 +29,7 @@ const About = () => {
 
       {/* About Us Navigation */}
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Learn More About Us

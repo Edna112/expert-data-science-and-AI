@@ -15,7 +15,7 @@ const Insights = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Insights & Tutorials
@@ -29,7 +29,7 @@ const Insights = () => {
 
       {/* Articles Grid Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Latest Articles
