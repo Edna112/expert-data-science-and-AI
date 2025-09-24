@@ -6,27 +6,26 @@ const Services = () => {
     {
       title: "Data Strategy & Consulting",
       description: "Develop comprehensive data strategies that align with your business objectives and drive measurable outcomes.",
-      icon: "📊"
+      
     },
     {
       title: "Machine Learning & AI Development",
       description: "Build custom ML models and AI solutions tailored to your specific business challenges and opportunities.",
-      icon: "🤖"
+    
     },
     {
       title: "Data Engineering & Infrastructure",
-      description: "Design and implement robust data pipelines and infrastructure to support scalable analytics and AI operations.",
-      icon: "⚙️"
+      description: "Design and implement robust data pipelines and infrastructure to support scalable analytics and AI operations."
     },
     {
       title: "Advanced Analytics & Business Intelligence",
       description: "Create powerful dashboards and analytics solutions that provide real-time insights into your business performance.",
-      icon: "📈"
+      
     },
     {
       title: "Model Deployment & MLOps",
       description: "Deploy and maintain production-ready ML models with comprehensive monitoring and automated retraining pipelines.",
-      icon: "🚀"
+      
     }
   ];
 
@@ -81,8 +80,8 @@ const Services = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
-              Comprehensive data science and AI solutions to accelerate your business success
+            <p className="text-xl md:text-2xl text-blue-100 italic">
+              Comprehensive data science and AI <br /> solutions to accelerate your business success
             </p>
           </div>
         </div>
@@ -104,7 +103,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
                 {/* Teal-blue header */}
-                <div className="bg-teal-600 px-6 py-4">
+                <div className="bg-[#158cba] px-6 py-4">
                   <h3 className="text-xl font-semibold text-white">
                     {service.title}
                   </h3>
@@ -151,18 +150,29 @@ const Services = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {trainingCategories.map((category, index) => (
-              <div key={index} className="card">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-                  {category.title}
-                </h3>
-                <ul className="space-y-3">
-                  {category.courses.map((course, courseIndex) => (
-                    <li key={courseIndex} className="flex items-start">
-                      <div className="w-2 h-2 bg-expert-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700">{course}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                {/* Teal Header Bar */}
+                <div className="bg-[#158cba] px-4 py-3">
+                  <h3 className="text-lg font-semibold text-white text-center">
+                    {category.title}
+                  </h3>
+                </div>
+                
+                {/* Card Content */}
+                <div className="p-6">
+                  <ul className="space-y-3">
+                    {category.courses.map((course, courseIndex) => (
+                      <li key={courseIndex} className="flex items-start">
+                        <div className="w-4 h-4 bg-[#158cba] rounded-full mt-1 mr-3 flex-shrink-0 flex items-center justify-center">
+                          <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-700 text-sm leading-relaxed">{course}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -181,13 +191,13 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="btn-primary bg-white text-expert-blue hover:bg-gray-100"
+              className="bg-white text-[#158cba] hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 border-2 border-white"
             >
               Contact Us Today
             </a>
             <a
               href="/schedule-consultation"
-              className="btn-secondary border-white text-white hover:bg-white hover:text-expert-blue"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#158cba] font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Schedule Free Consultation
             </a>
