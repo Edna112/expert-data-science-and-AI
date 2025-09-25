@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="relative text-white min-h-[70vh]"
+        className="relative text-white min-h-[80vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -15,7 +15,7 @@ const Home = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-6xl min-h-[80vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               ExpertDS.AI 
