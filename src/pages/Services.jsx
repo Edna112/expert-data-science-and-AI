@@ -75,7 +75,7 @@ const Services = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Services
@@ -103,8 +103,8 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
                 {/* Teal-blue header */}
-                <div className="bg-[#158cba] px-6 py-4">
-                  <h3 className="text-xl font-semibold text-white">
+                <div className="bg-[#158cba] px-6 py-4 min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-semibold text-white text-center leading-tight">
                     {service.title}
                   </h3>
                 </div>
@@ -152,8 +152,8 @@ const Services = () => {
             {trainingCategories.map((category, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Teal Header Bar */}
-                <div className="bg-[#158cba] px-4 py-3">
-                  <h3 className="text-lg font-semibold text-white text-center">
+                <div className="bg-[#158cba] px-4 py-4 min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-lg font-semibold text-white text-center leading-tight">
                     {category.title}
                   </h3>
                 </div>
@@ -185,7 +185,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-100 italic">
             Let's discuss how our services can help accelerate your data science and AI initiatives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

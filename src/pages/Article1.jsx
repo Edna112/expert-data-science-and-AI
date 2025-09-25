@@ -15,13 +15,13 @@ const Article1 = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <div className="text-sm text-white-200 font-semibold mb-4">Data Science</div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               The Future of Machine Learning in Business
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
               Explore how machine learning is transforming business operations and decision-making processes.
             </p>
             <div className="text-lg text-blue-100">March 15, 2024</div>
@@ -31,7 +31,7 @@ const Article1 = () => {
 
       {/* Article Content */}
       <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
               Machine learning is revolutionizing how businesses operate, make decisions, and serve their customers. 

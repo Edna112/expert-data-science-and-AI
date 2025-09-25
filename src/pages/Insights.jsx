@@ -20,7 +20,7 @@ const Insights = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Insights & Tutorials
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
               Topical posts on data science, AI, and business intelligence
             </p>
           </div>

@@ -30,7 +30,7 @@ const FounderCEO = () => {
 
       {/* Founder & CEO Section */}
       <section className="section-padding">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Profile Section with Text Wrapping Around Image */}
           <div className="text-black">
             {/* Founder Image - Float Left for Text Wrapping */}

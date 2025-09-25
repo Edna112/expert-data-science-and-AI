@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const ScheduleConsultation = () => {
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script when component unmounts
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
   return (
     <div>
       {/* Hero Section */}
@@ -20,7 +35,7 @@ const ScheduleConsultation = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Schedule Your Free Consultation
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
               Book a 30-minute consultation to discuss your data science and AI needs
             </p>
           </div>
@@ -43,22 +58,9 @@ const ScheduleConsultation = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/your-username/consultation"
+              data-url="https://calendly.com/neba-nfonsang-du/20min"
               style={{ minWidth: '320px', height: '700px' }}
             >
-              {/* Calendly widget will be embedded here */}
-              <div className="text-center text-gray-500 py-20">
-                <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                </svg>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Calendly Integration</h3>
-                <p className="text-lg mb-4">
-                  Replace this placeholder with your actual Calendly URL
-                </p>
-                <p className="text-sm text-gray-600">
-                  Update line 91 in this file with your Calendly scheduling link
-                </p>
-              </div>
             </div>
           </div>
         </div>

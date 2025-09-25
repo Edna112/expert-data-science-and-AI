@@ -15,13 +15,13 @@ const Article4 = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <div className="text-sm text-white-200 font-semibold mb-4">Cloud Computing</div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Cloud-Native Data Solutions
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
               Understanding the benefits and implementation of cloud-based data infrastructure.
             </p>
             <div className="text-lg text-blue-100">February 28, 2024</div>
@@ -31,7 +31,7 @@ const Article4 = () => {
 
       {/* Article Content */}
       <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
               Cloud-native data solutions represent a paradigm shift in how organizations approach data infrastructure. 

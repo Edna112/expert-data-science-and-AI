@@ -20,7 +20,7 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               About Us
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
+            <p className="text-xl md:text-2xl text-blue-100 italic">
               Leading the future of data science and AI solutions
             </p>
           </div>

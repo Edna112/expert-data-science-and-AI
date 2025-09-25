@@ -85,7 +85,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
               Ready to transform your data into business value? Let's talk.
             </p>
           </div>
@@ -103,7 +103,7 @@ const Contact = () => {
         }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-90"></div>
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch

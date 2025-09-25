@@ -6,29 +6,31 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative text-white min-h-screen "
+      <section 
+        className="relative text-white min-h-[70vh]"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
-      > <div className="absolute inset-0  z-10"></div>
-        <div className="max-w-6xl h-screen mx-auto px-4 sm:px-6 lg:px-8  absolute inset-0 z-20">
-          <div className="text-center h-screen flex flex-col justify-center items-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white italic mt-10">
-            ExpertDS.AI 
+      >
+        <div className="max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              ExpertDS.AI 
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
+            <p className="text-xl md:text-2xl text-blue-100 italic">
               Bridging the gap between <br /> data and business value
             </p>
-            <Link
-              to="/services"
-              className="btn-primary text-lg px-8 py-4"
-            >
-              Explore Our Services
-            </Link>
+            <div className="mt-8">
+              <Link
+                to="/services"
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Explore Our Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
