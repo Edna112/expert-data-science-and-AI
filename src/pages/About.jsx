@@ -31,15 +31,15 @@ const About = () => {
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Learn More About Us
             </h2>
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
               Discover our company story, mission, and meet our leadership team
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* About Us Card */}
             <Link to="/about/about-us" className="card hover:shadow-xl transition-all duration-300 group cursor-pointer">
               <div className="bg-gradient-to-br from-blue-400 to-blue-600 h-48 rounded-t-lg flex items-center justify-center">

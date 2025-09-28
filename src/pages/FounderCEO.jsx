@@ -30,11 +30,11 @@ const FounderCEO = () => {
 
       {/* Founder & CEO Section */}
       <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Profile Section with Text Wrapping Around Image */}
           <div className="text-black">
             {/* Founder Image - Float Left for Text Wrapping */}
-            <div className="float-left mr-6 mb-4">
+            <div className="float-left mr-10 mb-8">
               <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
                 <img
                   src={profileImage}
@@ -94,7 +94,7 @@ const FounderCEO = () => {
 
       {/* Back to About Us Link */}
       <section className="section-padding bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <Link 
             to="/about" 
             className="btn-secondary"

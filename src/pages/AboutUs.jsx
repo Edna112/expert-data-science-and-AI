@@ -30,21 +30,21 @@ const AboutUs = () => {
       <section className="section-padding">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               About Expert Data Science & AI, LLC
             </h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-xl text-gray-600 mb-8">
                 Expert Data Science & AI, LLC is a leading consulting firm specializing in advanced analytics, 
                 machine learning, and artificial intelligence solutions. We help organizations transform their 
                 data into competitive advantages through cutting-edge technology and expert guidance.
               </p>
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-xl text-gray-600 mb-8">
                 Our team combines deep technical expertise with real-world business experience, having delivered 
                 successful projects for Fortune 10 companies across various industries including retail, 
                 automotive, technology, and manufacturing.
               </p>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600 mb-8">
                 We are committed to bridging the gap between complex data science concepts and practical business 
                 applications, ensuring our clients achieve measurable results and sustainable competitive advantages 
                 in today's data-driven economy.
@@ -57,7 +57,7 @@ const AboutUs = () => {
       {/* Mission & Values */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-expert-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

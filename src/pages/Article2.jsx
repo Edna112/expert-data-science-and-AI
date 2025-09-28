@@ -15,7 +15,7 @@ const Article2 = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 py-24 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <div className="text-sm text-white-200 font-semibold mb-4">AI Engineering</div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white italic">
@@ -30,8 +30,8 @@ const Article2 = () => {
       </section>
 
       {/* Article Content */}
-      <section className="section-padding bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="section-padding bg-white py-16">
+        <div className="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
               Building AI solutions that can scale effectively is one of the biggest challenges facing organizations today. 
