@@ -15,7 +15,7 @@ const Article4 = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 py-24 min-h-[70vh] flex items-center justify-center">
+        <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16 py-24 min-h-[70vh] flex items-center justify-center">
           <div className="text-center">
             <div className="text-sm text-white-200 font-semibold mb-4">Cloud Computing</div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
@@ -31,7 +31,7 @@ const Article4 = () => {
 
       {/* Article Content */}
       <section className="section-padding bg-white py-16">
-        <div className="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div className="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
               Cloud-native data solutions represent a paradigm shift in how organizations approach data infrastructure. 

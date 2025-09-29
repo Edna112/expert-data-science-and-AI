@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImage from '../assets/WhatsApp_Image_2025-09-27_at_14.53.14.jpeg';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-18" style={{pointerEvents: 'auto'}}>
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src={logoImage} 
+                alt="Expert Data Science & AI Logo" 
+                className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
+              />
               <div className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold font-serif">
                 Expert Data Science & AI, LLC
               </div>

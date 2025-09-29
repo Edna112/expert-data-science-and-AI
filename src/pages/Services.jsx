@@ -1,31 +1,42 @@
 import React from 'react';
 import bannerImage from '../assets/website_banner_use_this_one.png';
+import aiGeneratedImage from '../assets/ai-generated-9268114_1280.jpg';
+import image22 from '../assets/image22.jpg';
+import image33 from '../assets/image33.jpg';
+import image44 from '../assets/image44.jpg';
+import robotImage1 from '../assets/robot-8530775_1280.jpg';
 
 const Services = () => {
   const services = [
     {
       title: "Data Strategy & Consulting",
       description: "Develop comprehensive data strategies that align with your business objectives and drive measurable outcomes.",
-      
+      image: aiGeneratedImage,
+      alt: "Data Strategy and Consulting Services"
     },
     {
       title: "Machine Learning & AI Development",
       description: "Build custom ML models and AI solutions tailored to your specific business challenges and opportunities.",
-    
+      image: image22,
+      alt: "Machine Learning and AI Development"
     },
     {
       title: "Data Engineering & Infrastructure",
-      description: "Design and implement robust data pipelines and infrastructure to support scalable analytics and AI operations."
+      description: "Design and implement robust data pipelines and infrastructure to support scalable analytics and AI operations.",
+      image: image33,
+      alt: "Data Engineering and Infrastructure"
     },
     {
       title: "Advanced Analytics & Business Intelligence",
       description: "Create powerful dashboards and analytics solutions that provide real-time insights into your business performance.",
-      
+      image: image44,
+      alt: "Advanced Analytics and Business Intelligence"
     },
     {
       title: "Model Deployment & MLOps",
       description: "Deploy and maintain production-ready ML models with comprehensive monitoring and automated retraining pipelines.",
-      
+      image: robotImage1,
+      alt: "Model Deployment and MLOps"
     }
   ];
 
@@ -113,21 +124,18 @@ const Services = () => {
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Text content */}
                   <div className="p-8">
-                    <div className="text-4xl mb-4">{service.icon}</div>
                     <p className="text-gray-700 text-lg leading-relaxed">
                       {service.description}
                     </p>
                   </div>
                   
-                  {/* Image placeholder */}
-                  <div className="bg-gray-200 flex items-center justify-center min-h-[200px]">
-                    <div className="text-center text-gray-500">
-                      <svg className="w-16 h-16 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                      <p className="text-sm font-medium">Service Image</p>
-                      <p className="text-xs">Professional illustration</p>
-                    </div>
+                  {/* Service Image */}
+                  <div className="bg-gray-200 flex items-center justify-center min-h-[200px] p-4">
+                    <img 
+                      src={service.image} 
+                      alt={service.alt} 
+                      className="w-full h-auto max-h-[250px] object-cover rounded-lg shadow-md"
+                    />
                   </div>
                 </div>
               </div>

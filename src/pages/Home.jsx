@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import bannerImage from '../assets/website_banner_use_this_one.png';
+import robotImage1 from '../assets/robot-8530775_1280.jpg';
+import robotImage2 from '../assets/robot-8452273_1280.png';
 
 const Home = () => {
   return (
@@ -78,15 +80,13 @@ const Home = () => {
                 </div>
               </div>
               
-              {/* Right Column - Image Placeholder */}
+              {/* Right Column - Image */}
               <div className="bg-gray-100 flex items-center justify-center p-6">
-                <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                  </svg>
-                  <p className="text-sm font-medium">Service Image</p>
-                  <p className="text-xs">Professional illustration</p>
-                </div>
+                <img 
+                  src={robotImage1} 
+                  alt="Data Science and AI Solutions" 
+                  className="w-full h-auto max-h-[300px] object-cover rounded-lg shadow-md"
+                />
               </div>
             </div>
           </div>
@@ -136,15 +136,13 @@ const Home = () => {
                 </div>
               </div>
               
-              {/* Right Column - Image Placeholder */}
+              {/* Right Column - Image */}
               <div className="bg-gray-100 flex items-center justify-center p-6">
-                <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                  </svg>
-                  <p className="text-sm font-medium">Service Image</p>
-                  <p className="text-xs">Professional illustration</p>
-                </div>
+                <img 
+                  src={robotImage2} 
+                  alt="AI Impact and Business Transformation" 
+                  className="w-full h-auto max-h-[300px] object-cover rounded-lg shadow-md"
+                />
               </div>
             </div>
           </div>
