@@ -123,18 +123,18 @@ const Services = () => {
                 {/* Content area */}
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Text content */}
-                  <div className="p-8">
-                    <p className="text-gray-700 text-lg leading-relaxed">
+                  <div className="p-8 flex items-center justify-center">
+                    <p className="text-gray-700 text-lg leading-relaxed text-center">
                       {service.description}
                     </p>
                   </div>
                   
                   {/* Service Image */}
-                  <div className="bg-gray-200 flex items-center justify-center min-h-[200px] p-4">
+                  <div className="bg-gray-200 flex items-center justify-center min-h-[300px] p-4">
                     <img 
                       src={service.image} 
                       alt={service.alt} 
-                      className="w-full h-auto max-h-[250px] object-cover rounded-lg shadow-md"
+                      className="w-full h-auto max-h-[350px] object-cover rounded-lg shadow-md"
                     />
                   </div>
                 </div>
