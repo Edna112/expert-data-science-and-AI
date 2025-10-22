@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import bannerImage from '../assets/website_banner_use_this_one.png';
 
 const Contact = () => {
@@ -72,7 +73,7 @@ const Contact = () => {
     <div>
       {/* Hero Section */}
       <section
-        className="relative text-white min-h-[70vh]"
+        className="relative text-white min-h-[70vh] overflow-hidden"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -80,42 +81,64 @@ const Contact = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.h1
+              className="text-4xl md:text-6xl font-bold mb-6 text-white"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               Contact Us
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic">
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto italic text-blue-100"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               Ready to transform your data into business value? Let's talk.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section
-        className="section-padding relative"
-        style={{
-          backgroundImage: `url(${bannerImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-white bg-opacity-90"></div>
-        <div className="relative max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="section-padding bg-gradient-secondary">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600">
               Fill out the form below and we'll get back to you within 24 hours.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
+            <motion.div
+              className="glass-card p-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+              }}
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -248,11 +271,21 @@ const Contact = () => {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
-            </div>
+            </motion.div>
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <motion.div
+                className="glass-card p-8"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+                }}
+              >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
@@ -293,9 +326,19 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="bg-expert-blue rounded-lg p-8 text-white">
+              <motion.div
+                className="bg-gradient-primary rounded-lg p-8 text-white"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+                }}
+              >
                 <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
                 <p className="mb-6">
                   Schedule a free consultation to discuss your data science and AI needs.
@@ -306,7 +349,7 @@ const Contact = () => {
                 >
                   Schedule Free Consultation
                 </a>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
