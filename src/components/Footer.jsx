@@ -164,7 +164,7 @@ const Footer = () => {
               >
                 <Link
                   to="/schedule-consultation"
-                  className="block w-full border-2 border-white text-white hover:bg-white hover:text-secondary-30 text-center py-2 px-4 rounded-lg transition-all duration-300 text-sm font-medium"
+                  className="block w-full border-2 border-white text-white text-center py-2 px-4 rounded-lg transition-all duration-300 text-sm font-medium"
                 >
                   Free Consultation
                 </Link>
