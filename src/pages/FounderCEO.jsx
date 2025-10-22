@@ -112,7 +112,7 @@ const FounderCEO = () => {
 
             {/* Clear float to prevent layout issues */}
             <div className="clear-both"></div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
