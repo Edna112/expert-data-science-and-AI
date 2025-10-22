@@ -22,9 +22,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="gradient-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="glass-card p-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
@@ -94,13 +95,13 @@ const Footer = () => {
             <div className="space-y-3">
               <Link
                 to="/contact"
-                className="block w-full bg-expert-blue hover:bg-expert-light-blue text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 text-sm font-medium"
+                className="btn-secondary text-center py-2 px-4 text-sm font-medium"
               >
                 Contact Us
               </Link>
               <Link
                 to="/schedule-consultation"
-                className="block w-full border border-expert-blue text-expert-blue hover:bg-expert-blue hover:text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 text-sm font-medium"
+                className="btn-primary text-center py-2 px-4 text-sm font-medium"
               >
                 Free Consultation
               </Link>
@@ -120,16 +121,16 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-white/80 text-sm">
               © {currentYear} Expert Data Science & AI, LLC. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <a href="#" className="text-white/80 hover:text-white text-sm transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <a href="#" className="text-white/80 hover:text-white text-sm transition-colors duration-200">
                 Terms of Service
               </a>
             </div>

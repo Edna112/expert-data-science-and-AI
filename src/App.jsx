@@ -20,7 +20,7 @@ import Article6 from './pages/Article6';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen gradient-secondary">
         <Navigation />
         <main>
           <Routes>
