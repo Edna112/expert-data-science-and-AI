@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import bannerImage from '../assets/website_banner_use_this_one.png';
 import aiGeneratedImage from '../assets/ai-generated-9268114_1280.jpg';
 import image22 from '../assets/image22.jpg';
@@ -78,7 +79,7 @@ const Services = () => {
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white min-h-[70vh]"
+        className="relative text-white min-h-[70vh] overflow-hidden"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -86,130 +87,196 @@ const Services = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="text-center">
+        <div className="relative max-w-6xl min-h-[70vh] flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 italic">
               Comprehensive data science and AI <br /> solutions to accelerate your business success
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Main Services */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-secondary">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-30 mb-4">
               Core Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We offer end-to-end data science and AI solutions designed to transform your business operations and drive measurable results.
             </p>
-          </div>
+          </motion.div>
 
           <div className="space-y-12">
             {services.map((service, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                {/* Teal-blue header */}
-                <div className="bg-[#158cba] px-6 py-4 min-h-[80px] flex items-center justify-center">
-                  <h3 className="text-xl font-semibold text-white text-center leading-tight">
-                    {service.title}
-                  </h3>
-                </div>
-                
-                {/* Content area */}
-                <div className="grid lg:grid-cols-2 gap-0">
-                  {/* Text content */}
-                  <div className="p-8 flex items-center justify-center">
-                    <p className="text-gray-700 text-lg leading-relaxed text-center">
-                      {service.description}
-                    </p>
-                  </div>
-                  
-                  {/* Service Image */}
-                  <div className="bg-gray-200 flex items-center justify-center min-h-[300px] p-4">
-                    <img 
-                      src={service.image} 
-                      alt={service.alt} 
-                      className="w-full h-auto max-h-[350px] object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-              </div>
+              <motion.div 
+                key={index} 
+                className="glass-card overflow-hidden"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+                }}
+              >
+                    {/* Teal-blue header */}
+                    <div className="bg-gradient-accent px-4 py-3 min-h-[60px] flex items-center justify-center">
+                      <h3 className="text-lg font-semibold text-white text-center leading-tight">
+                        {service.title}
+                      </h3>
+                    </div>
+                    
+                    {/* Content area */}
+                    <div className="grid lg:grid-cols-2 gap-0">
+                      {/* Text content */}
+                      <div className="p-6 flex items-center justify-center">
+                        <p className="text-gray-700 text-base leading-relaxed text-center">
+                          {service.description}
+                        </p>
+                      </div>
+                      
+                      {/* Service Image */}
+                      <div className="bg-gray-200 flex items-center justify-center min-h-[250px] p-3">
+                        <motion.img 
+                          src={service.image} 
+                          alt={service.alt} 
+                          className="w-full h-auto max-h-[280px] object-cover rounded-lg shadow-md"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </div>
+                    </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Training and Professional Development */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-secondary">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-30 mb-4">
               Training and Professional Development
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive training programs designed to equip your team with cutting-edge data science and AI skills.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {trainingCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                {/* Teal Header Bar */}
-                <div className="bg-[#158cba] px-4 py-4 min-h-[80px] flex items-center justify-center">
-                  <h3 className="text-lg font-semibold text-white text-center leading-tight">
-                    {category.title}
-                  </h3>
-                </div>
-                
-                {/* Card Content */}
-                <div className="p-6">
-                  <ul className="space-y-3">
-                    {category.courses.map((course, courseIndex) => (
-                      <li key={courseIndex} className="flex items-start">
-                        <div className="w-4 h-4 bg-[#158cba] rounded-full mt-1 mr-3 flex-shrink-0 flex items-center justify-center">
-                          <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <span className="text-gray-700 text-sm leading-relaxed">{course}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <motion.div 
+                key={index} 
+                className="glass-card overflow-hidden"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+                }}
+              >
+                    {/* Teal Header Bar */}
+                    <div className="bg-gradient-accent px-3 py-3 min-h-[60px] flex items-center justify-center">
+                      <h3 className="text-base font-semibold text-white text-center leading-tight">
+                        {category.title}
+                      </h3>
+                    </div>
+                    
+                    {/* Card Content */}
+                    <div className="p-4">
+                      <ul className="space-y-2">
+                        {category.courses.map((course, courseIndex) => (
+                          <motion.li 
+                            key={courseIndex} 
+                            className="flex items-start"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: courseIndex * 0.1 }}
+                            viewport={{ once: true }}
+                          >
+                            <div className="w-3 h-3 bg-accent-10 rounded-full mt-1 mr-2 flex-shrink-0 flex items-center justify-center">
+                              <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              </svg>
+                            </div>
+                            <span className="text-gray-700 text-xs leading-relaxed">{course}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-expert-blue text-white">
+      <section className="section-padding bg-gradient-primary text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 italic">
+          </motion.h2>
+          <motion.p 
+            className="text-xl mb-8 text-blue-100 italic"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Let's discuss how our services can help accelerate your data science and AI initiatives.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <a
               href="/contact"
-              className="bg-white text-[#158cba] hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 border-2 border-white"
+              className="btn-secondary text-lg px-8 py-4 inline-block"
             >
               Contact Us Today
             </a>
             <a
               href="/schedule-consultation"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#158cba] font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="border-2 border-white text-white hover:bg-white hover:text-secondary-30 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block"
             >
               Schedule Free Consultation
             </a>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

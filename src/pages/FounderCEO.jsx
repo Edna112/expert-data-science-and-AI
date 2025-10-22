@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import profileImage from '../assets/profile_pic__1_-removebg-preview.png';
 import bannerImage from '../assets/website_banner_use_this_one.png';
 
@@ -8,7 +9,7 @@ const FounderCEO = () => {
     <div>
       {/* Banner */}
       <section 
-        className="relative text-white min-h-[70vh]"
+        className="relative text-white min-h-[70vh] overflow-hidden"
         style={{
           backgroundImage: `url(${bannerImage})`,
           backgroundSize: 'cover',
@@ -17,32 +18,55 @@ const FounderCEO = () => {
         }}
       >
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-[70vh] flex items-center justify-center">
-          <div className="text-center">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Founder & CEO
             </h1>
             <p className="text-xl md:text-2xl text-blue-100">
               Meet Dr. Neba Nfonsang
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Founder & CEO Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-gradient-secondary">
         <div className="max-w-4xl mx-auto">
           {/* Profile Section with Text Wrapping Around Image */}
-          <div className="text-black">
+          <motion.div 
+            className="text-black glass-card p-8"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 0 30px rgba(2, 138, 176, 0.3), 0 0 60px rgba(21, 140, 186, 0.2)"
+            }}
+          >
             {/* Founder Image - Float Left for Text Wrapping */}
-            <div className="float-left mr-10 mb-8">
+            <motion.div 
+              className="float-left mr-10 mb-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
-                <img
+                <motion.img
                   src={profileImage}
                   alt="Dr. Neba Nfonsang - Founder & CEO"
                   className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Founder Information - Text Wraps Around Image */}
             <div className="text-lg leading-relaxed mb-6">
